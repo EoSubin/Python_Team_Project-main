@@ -239,17 +239,6 @@
                             <button type="button" class="choice-button" onclick="toggleButton(this)">실외</button>                        </div>
                     </div>
 
-                    <div>
-                        <label for="ootd_photo"><strong>오늘의 OOTD 업로드 하기</strong></label>
-                        <div class="ootd-upload-container">
-                            <label for="ootd_photo" class="upload-button">
-                                <img src="Plus Circle.png"class="plus-icon">
-                            </label>
-                            <input type="file" name="ootd_photo" id="ootd_photo" accept="image/*" style="display:none;" onchange="previewImage(event)">
-                            <img id="preview" src="{% if user.userprofile.ootd_photo %}{{ user.userprofile.ootd_photo.url }}{% endif %}" alt="OOTD 사진" class="ootd-preview">
-                        </div>
-                    </div>
-    
                     <button type="button" class="submit-button" onclick="location.href='{% url "recommend_outfit" %}'">OK</button>    
                 </form>
             </section>
