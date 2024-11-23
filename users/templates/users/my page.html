@@ -157,6 +157,28 @@
             font-size: 24px;
             cursor: pointer;
         }
+
+        .submit-button {
+            background-color: #e3e3e3;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .submit-button:hover {
+            background-color: #ff7a00;
+            color: white;
+        }
+
+        .submit-button:active {
+            background-color: #ff7a00;
+            color: white;
+        }
+
     </style>
     <script>
         // 갤러리 이미지 클릭 이벤트
@@ -220,6 +242,11 @@
                 <img id="modalImage" src="" alt="Large OOTD">
                 <p id="imageDate"></p>
             </div>
+        </div>
+
+        <h2 style= "color:black;">옷 불호 취향 재설정하기</h2>
+        <div class="box">
+            <button type="button" class="submit-button" onclick="location.href='{% url "dislike_survey" %}'">START</button>    
         </div>
     </main>
 </body>
